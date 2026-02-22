@@ -17,7 +17,7 @@ A guide to running Minecraft Bedrock on Linux using wineGDK and GDK-Proton
 - [WineGDK Github](https://github.com/Weather-OS/WineGDK)
 - [GDK-Proton Github](https://github.com/Weather-OS/GDK-Proton)
 - [JutoTV's Video Guide](https://www.youtube.com/watch?v=m76O2cRIEnM)
-- [Game Launchers Reverse Engineering Discord Server](https://discord.gg/RQtZUuHP)
+- [Game Launchers Reverse Engineering Discord Server](https://discord.gg/HD8bXfqFJf)
 
 
 
