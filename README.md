@@ -54,55 +54,54 @@ During Minecraft Bedrock for Windows version 1.21.120, the app was changed from 
 
 
 ## Guide
-This section is still being worked on.  The best advice is to:
-1.  Follow [JutoTV's Video Guide](https://www.youtube.com/watch?v=m76O2cRIEnM) for installing the game (0:00-10:21).
-    1. Get game binaries and put them in what I'll call the `MCBE-dir`
-        1. Using either a Windows machine or a Windows VM, install Minecraft Bedrock and run it once.
-        2. Open the game folder, very likely to be `C:\XboxGames\Minecraft for Windows`, then navigate to /Content, ex. `C:\XboxGames\Minecraft for Windows\Content`
-        4. From /Content, MOVE Minecraft.Windows.exe to the Desktop.
-        5. COPY AND PASTE Minecraft.Windows.exe from the Desktop into the /Content folder.
-        6. Move all the files within the /Content folder to your linux machine's `MCBE-dir/Content/` directory.  USB drives are an easy way to this when dual booting, moving between devices, or using a VM.
-    2. Add the certs to your MCBE-dir folder
-        - These are the steps at the [bottom of the GDK-Proton README](`C:\XboxGames\Minecraft for Windows`).
-        1. Download and extract [mingw-w64-x86_64-curl](https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-curl-8.17.0-1-any.pkg.tar.zst).
-        2. Replace `MCBE-dir/Content/Xcurl.dll` with `mingw64/bin/libcurl-4.dll` from the extracted folder.
-        3. Download SSL certificates using [https://curl.se/ca/cacert.pem](https://curl.se/ca/cacert.pem).
-        4. Place the downloaded file at `MCBE-dir/etc/ssl/certs/ca-bundle.crt`.
-    3. Install [Heroic](https://heroicgameslauncher.com/)
-    4. Download and set up Proton-GDK for use within Heroic
-        1. Download the [latest version of GDK-Proton](https://github.com/Weather-OS/GDK-Proton/releases).
-        2. Extract and move the folder into `/home/$USER$/.config/heroic/tools/proton/`.  This means that the contents(like `filelock.py`, `files`/, `protonFixes/`, `version`, and `proton`) are contained within a directory like `/home/$USER$/.config/heroic/tools/proton/GDK-Proton10-29/`.
-    5. Add the game within Heroic
-        1. Open the Heroic library and select "Add Game."
-        2. Fill in information:
-            - Game/App Title: `Minecraft GDK` is recommended
-            - App Image: Should Autofill if "Minecraft-GDK" is selected above
-            - Select Platform Version to Install: `Windows`
-            - Show Wine settings
-                - Use Default Wine Settings: unchecked
-                - WinePrefix: default is fine
-                - Wine version: Select the name of the folder created in step 4.  For example, you might select `GDK-Proton10-29`.
-            - Under "Select Executable," choose `MCBE-dir/Content/Minecraft.Windows.exe`.
-        3. Press finish.
-    6. Choose proper Wine prefixes within Heroic:
-        1. Open the settings for the game in Heroic.
-        2. Navigate to Wine and find the Wine Prefix section.
-        3. The following are required:
-            - Enable Wine-Wayland: checked
+Steps 1-6 follow [JutoTV's Video Guide](https://www.youtube.com/watch?v=m76O2cRIEnM) from 0:00-10:21.
+1. Get game binaries and put them in what I'll call the `MCBE-dir`.
+    1. Using either a Windows machine or a Windows VM, install Minecraft Bedrock and run it once.
+    2. Open the game folder, very likely to be `C:\XboxGames\Minecraft for Windows`, then navigate to /Content.  ex. `C:\XboxGames\Minecraft for Windows\Content`
+    4. From /Content, MOVE Minecraft.Windows.exe to the Desktop.
+    5. COPY AND PASTE Minecraft.Windows.exe from the Desktop into the /Content folder.
+    6. Move all the files within the /Content folder to your linux machine's `MCBE-dir/Content/` directory.  USB drives are an easy way to this when dual booting, moving between devices, or using a VM.
+2. Add the certs to your MCBE-dir folder.
+    - These are the steps at the [bottom of the GDK-Proton README](https://github.com/Weather-OS/GDK-Proton#for-minecraft).
+    1. Download and extract [mingw-w64-x86_64-curl](https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-curl-8.17.0-1-any.pkg.tar.zst).
+    2. Replace `MCBE-dir/Content/Xcurl.dll` with `mingw64/bin/libcurl-4.dll` from the extracted folder.
+    3. Download SSL certificates using [https://curl.se/ca/cacert.pem](https://curl.se/ca/cacert.pem).
+    4. Place the downloaded file at `MCBE-dir/etc/ssl/certs/ca-bundle.crt`.
+3. Install [Heroic](https://heroicgameslauncher.com/).
+4. Download and set up Proton-GDK for use within Heroic.
+    1. Download the [latest version of GDK-Proton](https://github.com/Weather-OS/GDK-Proton/releases).
+    2. Extract and move the folder into `/home/$USER$/.config/heroic/tools/proton/`.  This means that the contents(like `filelock.py`, `files`/, `protonFixes/`, `version`, and `proton`) are contained within a directory like `/home/$USER$/.config/heroic/tools/proton/GDK-Proton10-29/`.
+5. Add the game within Heroic.
+    1. Open the Heroic library and select "Add Game."
+    2. Fill in the information:
+        - Game/App Title: `Minecraft GDK` is recommended
+        - App Image: Should Autofill if "Minecraft-GDK" is selected above
+        - Select Platform Version to Install: `Windows`
+        - Show Wine settings
+            - Use Default Wine Settings: unchecked
+            - WinePrefix: default is fine
+            - Wine version: Select the name of the folder created in step 4.  For example, you might select `GDK-Proton10-29`.
+        - Under "Select Executable," choose `MCBE-dir/Content/Minecraft.Windows.exe`.
+    3. Press finish.
+6. Choose proper Wine prefixes within Heroic.
+    1. Open the settings for the game in Heroic.
+    2. Navigate to Wine and find the Wine Prefix section.
+    3. The following are required:
+        - Enable Wine-Wayland: checked
 
 **Steps for 26.0+:**
 
-2. "Copy windows.ui.dll from a working wine (or WineGDK) build to your GDK-Proton prefix" ([Weather-OS](https://discord.com/channels/1123890623586504714/1123953698440220672/1468067338006958271)).
+7. "Copy windows.ui.dll from a working wine (or WineGDK) build to your GDK-Proton prefix" ([Weather-OS](https://discord.com/channels/1123890623586504714/1123953698440220672/1468067338006958271)).
     1. Install Wine from https://gitlab.winehq.org/wine/wine/-/wikis/Download.
     2. Copy `/home/$USER$/.wine/drive_c/windows/system32` to `/home/$USER$/Games/Heroic/Prefixes/default/GAMENAME/drive_c/windows/system32`.
-3. "Install the msi package located under Installers/GameInputRedist.msi within the game's binaries" ([Weather-OS](https://discord.com/channels/1123890623586504714/1168191388807073875/1450392912973140120)).
+8. "Install the msi package located under Installers/GameInputRedist.msi within the game's binaries" ([Weather-OS](https://discord.com/channels/1123890623586504714/1168191388807073875/1450392912973140120)).
     1. Open the settings for the game in Heroic.
     2. Navigate to Wine and click "run exe on prefix" at the very bottom.
     3. Select `MCBE-dir/Installers/GameInputRedist.msi`.
 
 **End steps for 26.0+**
 
-4. Install and run ProxyPass.  This follow [JutoTV's Video Guide](https://www.youtube.com/watch?v=m76O2cRIEnM) from [10:21-15:55](https://youtu.be/m76O2cRIEnM?t=621).
+9. Install and run ProxyPass.  This follow [JutoTV's Video Guide](https://www.youtube.com/watch?v=m76O2cRIEnM) from [10:21-15:55](https://youtu.be/m76O2cRIEnM?t=621).
     1. Create a ProxyPass directory, perhaps in your home directory.
     2. [Download ProxyPass](https://github.com/Kas-tle/ProxyPass/releases) and move the .jar into the ProxyPass directory.
     3. Open the ProxyPass directory in your terminal and run `java -jar ProxyPass.jar`.
