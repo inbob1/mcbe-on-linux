@@ -93,7 +93,7 @@ Steps 1-6 follow [JutoTV's Video Guide](https://www.youtube.com/watch?v=m76O2cRI
 
 7. "Copy windows.ui.dll from a working wine (or WineGDK) build to your GDK-Proton prefix" ([Weather-OS](https://discord.com/channels/1123890623586504714/1123953698440220672/1468067338006958271)).
     1. Install Wine from https://gitlab.winehq.org/wine/wine/-/wikis/Download.
-    2. Copy `/home/$USER$/.wine/drive_c/windows/system32` to `/home/$USER$/Games/Heroic/Prefixes/default/GAMENAME/drive_c/windows/system32`.
+    2. Copy `/home/$USER$/.wine/drive_c/windows/system32/windows.ui.dll` to `/home/$USER$/Games/Heroic/Prefixes/default/GAMENAME/drive_c/windows/system32/windows.ui.dll`.  This will overwrite an existing windows.ui.dll.
 8. "Install the msi package located under Installers/GameInputRedist.msi within the game's binaries" ([Weather-OS](https://discord.com/channels/1123890623586504714/1168191388807073875/1450392912973140120)).
     1. Open the settings for the game in Heroic.
     2. Navigate to Wine and click "run exe on prefix" at the very bottom.
