@@ -121,8 +121,11 @@ Heroic users: `/home/$USER$/Games/Heroic/Prefixes/default/GAMENAME/drive_c/users
 ### Connection time out when joining servers
 In options.txt, turn `do_not_show_multiplayer_online_safety_warning` to 1 ([AnnoyingRains](https://discord.com/channels/1123890623586504714/1438901715628851250/1464916667728396289)).
 
-### Infinite panorama loading screen
+### Infinite loading screen panorama when joining servers
 In options.txt, turn `do_not_show_multiplayer_online_safety_warning` to 1 ([JutoTV](https://www.youtube.com/watch?v=m76O2cRIEnM)).
+
+### Host must update game version (when host is same game version)
+Update ProxyPass
 
 ### Slow responsivness
 In options.txt, turn `gfx_vsync` to 0 ([SineVector](https://discord.com/channels/1123890623586504714/1438901715628851250/1440126243021258963)).
